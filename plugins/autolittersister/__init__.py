@@ -19,7 +19,7 @@ class AutoLitterSister(_PluginBase):
     # 插件图标
     plugin_icon = "Melody_A.png"
     # 插件版本
-    plugin_version = "0.0.10"
+    plugin_version = "0.0.11"
     # 插件作者
     plugin_author = "envyafish"
     # 作者主页
@@ -83,12 +83,13 @@ class AutoLitterSister(_PluginBase):
                 self.update_config(self._config)
                 self._scheduler = BackgroundScheduler(timezone=settings.TZ)
                 logger.info("3秒后立即来一下")
-                self._scheduler.add_job(func=self.main, trigger='date',
-                                        run_date=datetime.now(tz=pytz.timezone(settings.TZ)) + timedelta(seconds=3),
-                                        name="小姐姐自己动")
-                if self._scheduler.get_jobs():
-                    self._scheduler.print_jobs()
-                    self._scheduler.start()
+                self.main()
+                # self._scheduler.add_job(func=self.main, trigger='date',
+                #                         run_date=datetime.now(tz=pytz.timezone(settings.TZ)) + timedelta(seconds=3),
+                #                         name="小姐姐自己动")
+                # if self._scheduler.get_jobs():
+                #     self._scheduler.print_jobs()
+                #     self._scheduler.start()
 
     pass
 

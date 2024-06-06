@@ -3,11 +3,12 @@
         "name": "小姐姐自己动",
         "description": "",
         "labels": "小姐姐",
-        "version": "0.0.10",
+        "version": "0.0.11",
         "icon": "Melody_A.png",
         "author": "envyafish",
         "level": 2,
         "history": {
+            "v0.0.11": "测试一下",
             "v0.0.10": "测试一下",
             "v0.0.9": "测试一下",
             "v0.0.8": "测试一下",
